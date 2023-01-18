@@ -12,7 +12,7 @@ const host = config.host;
 
 app.post('/tvtime', jsonParser,  async (req: Request, res: Response) => {
 
-  const plexUser = req.params.user;
+  const plexUser = req.query.user;
   if (!plexUser) {
     return res.status(400).send({'message': 'PlexUserMissing'});
 	}
