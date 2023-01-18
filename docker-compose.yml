@@ -1,0 +1,9 @@
+version: '3.3'
+services:
+    plex_tvtime_webhook:
+        build: .
+        environment:
+            - TVTIME_SYMFONY=YOUR_KEY
+            - TVTIME_TVST_REMEMBER=YOUR_KEY
+        ports:
+        - "80:3000"
